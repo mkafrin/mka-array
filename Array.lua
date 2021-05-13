@@ -1099,6 +1099,7 @@ setmetatable(Array, {
 	end,
 	
 	__call = function (self, t)
+		if t == nil then t = {} end
 		setmetatable(t, self)
 		return t
 	end
